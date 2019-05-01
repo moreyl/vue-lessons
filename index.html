@@ -16,11 +16,13 @@
         </style>
         <h1>Vue Basics</h1>
         <div id="app">
+            <p>I earn {{ wage }} pounds per our</p>
+            <button v-on:click="changeWage(1)">Decrise wage by 1$</button>
+            <button v-on:click="changeWage(-1)">Decrise wage by 1$</button>
+            <button v-on:dblclick="changeWage(5)">Decrise wage by 5$</button>
+            <button v-on:dblclick="changeWage(-5)">Decrise wage by 5$</button>
+
         <h2>{{ title }}</h2>
-        <p>{{ greet('morning') }}</p>
-        <a :href="url">YouTube</a>
-         <div :class="classes"> Classes for instence</div>
-         <input type = "text" :value="name">
     </div>
 
      <script src="app.js"></script>    
