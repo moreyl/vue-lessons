@@ -5,22 +5,20 @@
     </head>
     <body>   
         <style>
-        .one {
-            color:green;
-        }
-
-        .two {
-            text-decoration: line-through;
-        }
+    .canvas {
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+        background: #ddd;
+    }
         
         </style>
         <h1>Vue Basics</h1>
         <div id="app">
             <p>I earn {{ wage }} pounds per our</p>
-            <button v-on:click="changeWage(1)">Decrise wage by 1$</button>
-            <button v-on:click="changeWage(-1)">Decrise wage by 1$</button>
-            <button v-on:dblclick="changeWage(5)">Decrise wage by 5$</button>
-            <button v-on:dblclick="changeWage(-5)">Decrise wage by 5$</button>
+            <button @click="logEvent">Log Event Info</button>
+            <div class="canvas" @mousemove="logCoords">{{ coords.x }}, {{ coords.y }}</div>
+
 
         <h2>{{ title }}</h2>
     </div>
