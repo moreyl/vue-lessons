@@ -8,11 +8,18 @@
         <h1>Vue Basics</h1>
         <div id="app">
         <h2>{{ title }}</h2>
-        <p v-if="showName"> Mario </p>
-        <p v-else-if="showAge">25</p>
+        <ul>
+            <li v-for="item in items">{{ item }}</li>
+        </ul>
 
-        <button @click="toggleName">Show Name: {{showName}}</button>
-        <button @click="toggleAge">Show Age: {{showAge}}</button>
+        <div v-for="(ninja, index) in ninjas">
+            <p>{{ index }} - {{ ninja.name }}</p>
+            <p>age: {{ ninja.age }}</p>
+            <p>belt colour: {{ ninja.belt }}</p>
+
+        </div>
+
+  
 
 
         </div>
